@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Teklifi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Benimle date'e çıkar mısın ?</h1>
+        <img src="mcqueen.jpg" alt="Şimşek Mcqueen">
+        <div class="buttons">
+            <button onclick="noButton()">Hayır</button>
+            <button onclick="yesButton()">Evet</button>
+        </div>
+    </div>
+
+    <script>
+        let noCount = 0;
+        function noButton() {
+            const noMessages = ["Niye hayır diyonnn", "Kırma beni he de be gülüm", "Kızmaya başlıyorum", "lojmana gelip aşkımmmm diye bağırırım!!!", "Maçoyum ben unutma", "Nolur desem ?", "canım karım desem", "Bak bi daha evine bırakmam!! (grcek)", "Tm artık evete bas selenim (pro coder değilim daha)"];
+            document.querySelector('h1').innerText = noMessages[noCount % noMessages.length];
+            noCount++;
+            document.querySelector('.buttons button:nth-child(2)').style.width = `${120 + noCount * 10}px`;
+        }
+
+        function yesButton() {
+            document.querySelector('h1').innerText = "KAÇOVVVVV :) :)";
+            document.querySelector('.buttons').innerHTML = '<img src="sally.jpg" alt="Gocunmaa" style="width: 250px; height: 250px;">';
+        }
+    </script>
+</body>
+</html>
